@@ -5,9 +5,15 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: grey;
+    
   }
-  
+  img{
+    position: absolute;
+    width: 100vw;
+    min-height: 100vh;
+    object-fit: cover;
+    z-index: -100;
+  }
   .quiz-container {
     display: flex;
     flex-direction: column;
