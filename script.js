@@ -59,6 +59,14 @@ start.addEventListener("click",()=>{
     startQuiz();
     start.classList.add("hide");
 })
+const quit=document.getElementById("quit");
+quit.addEventListener("click",quitQuiz)
+function quitQuiz(){
+    resultDiv.innerText="Thanks for participating"
+    quit.classList.add("hide")
+    resetState();
+  
+}
 
 
 function startQuiz() {
@@ -69,6 +77,7 @@ function startQuiz() {
   nextButton.classList.remove("hide");
   restartButton.classList.add("hide");
   resultDiv.classList.add("hide");
+  quit.classList.add("hide");
   setNextQuestion();
 }
 
@@ -131,5 +140,6 @@ function endQuiz() {
   nextButton.classList.add("hide");
   restartButton.classList.remove("hide");
   resultDiv.classList.remove("hide");
+  quit.classList.remove("hide");
   resultDiv.innerText = `Your final score: ${score} / ${shuffledQuestions.length}`;
 }
