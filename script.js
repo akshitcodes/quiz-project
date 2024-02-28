@@ -54,8 +54,12 @@ const questions = [
     ]
   }
 ];
+const start=document.getElementById("start");
+start.addEventListener("click",()=>{
+    startQuiz();
+    start.classList.add("hide");
+})
 
-startQuiz();
 
 function startQuiz() {
   score = 0;
